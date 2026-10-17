@@ -1,0 +1,24 @@
+# --- web ---
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+pydantic>=2.7
+pydantic-settings>=2.3
+
+# --- AI ---
+google-genai>=1.0
+
+# --- documents / OCR ---
+pypdf>=5.0
+pypdfium2>=4.30        # renders scanned PDF pages for OCR (no poppler needed)
+pytesseract>=0.3.10    # needs the Tesseract binary installed separately
+Pillow>=10.1
+
+# --- retrieval / similarity ---
+numpy>=1.26
+scikit-learn>=1.4
+sentence-transformers>=3.0   # large (pulls in PyTorch); only loaded on first /api/rag/ask
+
+# --- tests ---
+pytest>=8.0
+httpx>=0.27
